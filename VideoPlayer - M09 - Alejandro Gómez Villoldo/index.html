@@ -1,0 +1,69 @@
+<html>
+
+<head>
+   <script type="text/javascript" src="js/player.js"></script>
+   <link rel="stylesheet" type="text/css" href="css/player.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"></script>
+   <meta charset="UTF-8">
+   <meta name="description" content="Video Player Test">
+   <meta name="keywords" content="HTML, CSS, JavaScript">
+   <meta name="author" content="Alejandro Gómez">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Simple Video Player - Alejandro</title>
+</head>
+
+<body>
+   <div class="container h-100 d-flex flex-column">
+      <div class="row">
+         <div class="col-12">
+            <div class="col-12 d-flex justify-content-center" id="titletext">
+               <h1>Bocchi the Rock! Solo Guitar</h1>
+            </div>
+            <main class="col-12 player">
+               <section class="col-12 d-flex justify-content-center buttons">
+                  <video id='video-player' width="650" height="365"> <!--controls-->
+                     <source id="videoplaying" src='video/VideoMochi.mp4' type='video/mp4'>
+                  </video>
+               </section>     
+               <section class="col-12 d-flex justify-content-center buttons" id="player-controls">
+                  <div class="play-video">
+                     <i class="fa fa-play-circle fa-3x" id="playvid"></i>
+                 </div>
+                  <div class="pause-video">
+                      <i class="fa-solid fa-circle-pause fa-3x" id="pausevid"></i>
+                  </div>
+                  <div class="stop-video">
+                      <i class="fa-solid fa-circle-stop fa-3x" id="stopvid"></i>
+                  </div>
+                  <div class="audio-video d-flex justify-content-center">
+                     <i class="fa-solid fa-volume-high fa-2x" id="vol_img"></i>
+                     <input type="range" id="change_vol" step="0.05" min="0" max="1" value="1">
+                  </div>
+              </section>
+            </main>
+            <div class="col-12 container text-center" id="textpresent">
+                  <p>
+                     El video presenta una parte de la serie "Bocchi the Rock!", una serie animada de Japón, donde la protagonista
+                     realiza un solo con su guitarra para inciar un concierto de presentación de su música. 
+                  </p>
+            </div>
+         </div>
+      </div>
+      <footer class="col-12 container text-center" id="textfooter">
+         <p>
+            CloverWorks - Bocchi the Rock! - 2022
+         </p>
+      </footer>
+   </div>
+   <script src="js/player.js"></script>
+</body>
+
+</html>
